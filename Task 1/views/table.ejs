@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ITRex Group Node.js Lab | Test task</title>
+</head>
+<body>
+	<h1>The current exchange rate of the Belarusian ruble in relation to all the foreign currencies established by the National Bank of the Republic of Belarus</h1>
+	<table style="width: 70%;text-align: center;">
+  		<tr>
+    		<th>Foreign currency denomination</th>
+    		<th>Number of units of foreign currency, letter code of the currency</th>
+    		<th>Official rate</th>
+  		</tr>
+  		<% tableData.forEach(function(currency) {%>
+  		<% return( %>
+   		<tr>
+    		<td><%= currency.Cur_Name%></td>
+    		<td><%= currency.Cur_Scale%> <%= currency.Cur_Abbreviation%></td>
+    		<td><%= currency.Cur_OfficialRate%></td>
+  		</tr>
+  		<% ) %>
+  		<% }); %>
+	</table>
+</body>
+</html>
